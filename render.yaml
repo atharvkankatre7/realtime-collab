@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: realtime-collab-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    region: oregon
+    envVars:
+      - key: MONGO_URI
+        value: YOUR_MONGODB_CONNECTION_STRING
+      - key: JWT_SECRET
+        value: YOUR_SECRET_KEY
